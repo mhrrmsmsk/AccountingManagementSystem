@@ -1,4 +1,5 @@
 using AccountSystem.Data.Mappers;
+using AccountSystem.Dtos.Product;
 using AccountSystem.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Company> Companies { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
-
+    public DbSet<ProductDetailDto> ProductDetails { get; set; }
     // Master Data
     public DbSet<Category> Categories { get; set; }
     public DbSet<Unit> Units { get; set; }

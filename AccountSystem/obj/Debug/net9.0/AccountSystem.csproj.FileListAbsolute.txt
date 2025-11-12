@@ -172,3 +172,5 @@
 /Users/muharremsimsek/RiderProjects/AccountSystem/AccountSystem/obj/Debug/net9.0/AccountSystem.pdb
 /Users/muharremsimsek/RiderProjects/AccountSystem/AccountSystem/obj/Debug/net9.0/AccountSystem.genruntimeconfig.cache
 /Users/muharremsimsek/RiderProjects/AccountSystem/AccountSystem/obj/Debug/net9.0/ref/AccountSystem.dll
+/Users/muharremsimsek/RiderProjects/AccountSystem/AccountSystem/obj/Debug/net9.0/AccountSystem.sourcelink.json
+/Users/muharremsimsek/RiderProjects/AccountSystem/AccountSystem/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

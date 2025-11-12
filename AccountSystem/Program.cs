@@ -2,6 +2,7 @@ using AccountSystem.Data;
 using AccountSystem.Entities;
 using AccountSystem.Interfaces;
 using AccountSystem.Repository;
+using AccountSystem.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -21,7 +22,7 @@ builder.Services.AddIdentity<User, Role>(options =>
         options.Password.RequireUppercase = true;
         options.Password.RequireLowercase = true;
         options.User.AllowedUserNameCharacters = 
-            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ "; // boşluk ve Türkçe karakterleri ekleyebilirsin
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ ";
         options.User.RequireUniqueEmail = true;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -70,6 +71,9 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())

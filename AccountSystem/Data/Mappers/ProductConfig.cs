@@ -34,6 +34,10 @@ public class ProductConfig : IEntityTypeConfiguration<Product>
 
         entity.Property(p => p.VatRate)
             .HasColumnType("decimal(5,2)");
+        
+        entity.Property(p => p.CurrentStock)
+            .HasDefaultValue(0)
+            .IsRequired();
 
         entity.Property(p => p.CreatedAt)
             .HasColumnType("datetime2");

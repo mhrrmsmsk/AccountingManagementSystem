@@ -8,7 +8,7 @@ public class Product
     public int Id { get; set; } // PK
 
     public int CompanyId { get; set; } // FK
-    public Company Company { get; set; } // Navigation
+    public Company Company { get; set; } 
 
     public string ProductCode { get; set; } = string.Empty;
     public string ProductName { get; set; } = string.Empty;
@@ -16,8 +16,8 @@ public class Product
     public int CategoryId { get; set; } // FK
     public Category Category { get; set; }
 
-    public int UnitId { get; set; } 
-    public Unit Unit { get; set; }
+    public int UnitId { get; set; } // FK
+    public Unit Unit { get; set; } 
 
     public string Barcode { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
@@ -26,6 +26,7 @@ public class Product
     public decimal SalePrice { get; set; }
 
     public decimal VatRate { get; set; } 
+    public int CurrentStock { get; set; } = 0;
 
     public int MinStock { get; set; }
     public int MaxStock { get; set; }
